@@ -17,29 +17,20 @@
 
 body{
     font-family:'Inter',sans-serif;
-    background:#0f1117;
-    color:#e6edf3;
+    background:#0b1120;
+    color:#e2e8f0;
+    overflow-x:hidden;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-}
-
-section{
-    padding:90px 0;
-}
-
-/* NAVBAR */
+/* NAVIGATION */
 
 nav{
     position:fixed;
     width:100%;
     top:0;
-    background:#0f1117;
-    padding:15px 0;
-    border-bottom:1px solid #1f2937;
+    background:#0b1120;
+    padding:18px 0;
+    border-bottom:1px solid rgba(255,255,255,0.05);
     z-index:1000;
 }
 
@@ -51,23 +42,23 @@ nav ul{
 }
 
 nav a{
-    color:#9ca3af;
+    color:#94a3b8;
     text-decoration:none;
     font-size:14px;
+    transition:0.3s;
 }
 
 nav a:hover{
-    color:#00f5d4;
+    color:#8b5cf6;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    min-height:100vh;
-    margin-top:80px;
+    padding:140px 8% 80px 8%;
 }
 
 .hero-text{
@@ -81,30 +72,46 @@ nav a:hover{
 
 .hero-text h2{
     font-weight:400;
-    color:#00f5d4;
     margin-bottom:20px;
+    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero-text p{
-    color:#9ca3af;
-    margin-bottom:25px;
+    color:#94a3b8;
+    line-height:1.8;
+    margin-bottom:30px;
 }
 
 .hero-buttons a{
     display:inline-block;
-    padding:10px 18px;
+    padding:12px 22px;
     margin-right:15px;
-    border-radius:6px;
+    border-radius:8px;
     text-decoration:none;
     font-size:14px;
-    border:1px solid #00f5d4;
-    color:#00f5d4;
     transition:0.3s;
 }
 
-.hero-buttons a:hover{
-    background:#00f5d4;
-    color:#0f1117;
+.primary-btn{
+    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+    color:white;
+}
+
+.primary-btn:hover{
+    box-shadow:0 0 25px rgba(139,92,246,0.7);
+    transform:translateY(-3px);
+}
+
+.secondary-btn{
+    border:1px solid #8b5cf6;
+    color:#8b5cf6;
+}
+
+.secondary-btn:hover{
+    background:#8b5cf6;
+    color:white;
 }
 
 .hero-image{
@@ -113,88 +120,186 @@ nav a:hover{
 
 .hero-image img{
     width:100%;
-    border-radius:8px;
-    box-shadow:0 0 40px rgba(0,255,212,0.2);
+    border-radius:15px;
+    box-shadow:0 0 40px rgba(139,92,246,0.4);
+    transition:0.4s;
 }
 
-/* SECTION TITLES */
+.hero-image img:hover{
+    box-shadow:0 0 70px rgba(139,92,246,0.8);
+    transform:scale(1.03);
+}
 
-section h2{
-    font-size:2rem;
+/* SECTIONS */
+
+section{
+    padding:100px 8%;
+}
+
+h2{
+    text-align:center;
+    font-size:2.3rem;
     margin-bottom:40px;
-    color:#00f5d4;
 }
 
-/* PROJECT CARDS */
-
-.project{
-    background:#161b22;
-    padding:25px;
-    border-radius:8px;
-    margin-bottom:30px;
-    border:1px solid #1f2937;
-    transition:0.3s;
+.highlight{
+    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-.project:hover{
-    border-color:#00f5d4;
-    transform:translateY(-5px);
+/* ABOUT */
+
+.about-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    color:#94a3b8;
 }
 
-.project h3{
-    margin-bottom:10px;
-}
-
-.project p{
-    font-size:14px;
-    color:#9ca3af;
-    margin-bottom:8px;
-}
-
-.project a{
-    color:#00f5d4;
-    text-decoration:none;
-    font-size:14px;
-}
-
-/* SKILLS GRID */
+/* SKILLS */
 
 .skills-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
+    gap:30px;
 }
 
 .skill-box{
-    background:#161b22;
-    padding:20px;
-    border-radius:8px;
-    border:1px solid #1f2937;
+    background:#111827;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.4s;
 }
 
-/* CERTIFICATIONS */
+.skill-box:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 25px rgba(59,130,246,0.4);
+}
 
-.cert-list{
-    line-height:2;
-    color:#9ca3af;
+/* PROJECTS */
+
+.project-card{
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    margin-bottom:35px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 30px rgba(139,92,246,0.4);
+}
+
+.project-card h3{
+    color:#3b82f6;
+    margin-bottom:10px;
+}
+
+.project-card p{
+    color:#94a3b8;
+}
+
+/* RESEARCH */
+
+.research-box{
+    max-width:900px;
+    margin:auto;
+    background:#111827;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.4s;
+}
+
+.research-box:hover{
+    box-shadow:0 0 30px rgba(139,92,246,0.4);
 }
 
 /* CONTACT */
 
-.contact{
-    text-align:center;
+.contact-section{
+    background:linear-gradient(135deg,#0f172a,#111827);
 }
 
-.contact a{
-    color:#00f5d4;
-    text-decoration:none;
+.contact-title{
+    text-align:center;
+    font-size:2.5rem;
 }
 
-footer{
+.contact-title span{
+    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.contact-sub{
     text-align:center;
-    padding:40px 0;
-    border-top:1px solid #1f2937;
-    color:#6b7280;
+    color:#94a3b8;
+    margin-bottom:50px;
+}
+
+.contact-box{
+    display:flex;
+    gap:40px;
+    background:rgba(255,255,255,0.05);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.contact-info{
+    width:40%;
+}
+
+.contact-form{
+    width:60%;
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    background:#1f2937;
+    border:1px solid #374151;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:8px;
+    color:white;
+}
+
+.contact-form button{
+    background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+    border:none;
+    padding:14px;
+    border-radius:10px;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    box-shadow:0 0 30px rgba(139,92,246,0.6);
+    transform:translateY(-4px);
+}
+
+/* SCROLL ANIMATION */
+
+.fade-in{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* RESPONSIVE */
@@ -204,11 +309,19 @@ footer{
         flex-direction:column;
         text-align:center;
     }
-    .hero-text,.hero-image{
+
+    .hero-text,
+    .hero-image{
         width:100%;
     }
-    .hero-image{
-        margin-top:40px;
+
+    .contact-box{
+        flex-direction:column;
+    }
+
+    .contact-info,
+    .contact-form{
+        width:100%;
     }
 }
 </style>
@@ -219,161 +332,141 @@ footer{
 <nav>
 <ul>
 <li><a href="#about">About</a></li>
-<li><a href="#research">Research</a></li>
-<li><a href="#projects">Projects</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#research">Research</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 </nav>
 
-<div class="container">
-
 <!-- HERO -->
-<div class="hero">
+<section class="hero fade-in">
 <div class="hero-text">
 <h1>Muthu Selvam</h1>
 <h2>AI Systems Engineer | LLM Architect | Deep Learning Researcher</h2>
 <p>
-Electrical & Electronics Engineer turned AI Engineer. 
-Specialized in LSTM Optimization, Retrieval-Augmented Generation (RAG), 
-Multi-Agent AI Systems, and Instruction Fine-Tuning using LoRA.
+Building intelligent AI systems focused on LLM architectures, 
+Retrieval-Augmented Generation, Multi-Agent AI, and optimization-driven Deep Learning.
 </p>
 
 <div class="hero-buttons">
-<a href="#projects">View Projects</a>
-<a href="#research">Research Paper</a>
+<a href="#projects" class="primary-btn">View Projects</a>
+<a href="#contact" class="secondary-btn">Contact Me</a>
 </div>
 </div>
 
 <div class="hero-image">
 <img src="profile.jpg" alt="Muthu Selvam">
 </div>
-</div>
+</section>
 
 <!-- ABOUT -->
-<section id="about">
-<h2>About Me</h2>
-<p>
-Bachelor of Engineering in Electrical & Electronics Engineering from 
-St. Joseph’s Institute of Technology. Transitioned into Artificial Intelligence 
-through applied Machine Learning, Deep Learning, and Large Language Model systems.
-</p>
-</section>
-
-<!-- RESEARCH -->
-<section id="research">
-<h2>Research & Publication</h2>
-
-<div class="project">
-<h3>Optimized LSTM Model for Day-Ahead Solar Power Prediction using ACO</h3>
-<p><strong>Published:</strong> International Research Journal on Advanced Engineering Hub (March 2025)</p>
-<p><strong>Contribution:</strong> Hyperparameter optimization of LSTM using Ant Colony Optimization for seasonal solar forecasting.</p>
-<p><strong>Best Performance:</strong> MAE: 0.22 kW | RMSE: 0.26 kW | R²: 0.93</p>
+<section id="about" class="fade-in">
+<h2>About <span class="highlight">Me</span></h2>
+<div class="about-content">
+Electrical & Electronics Engineering graduate transitioned into Artificial Intelligence.
+Focused on building production-ready AI systems including RAG pipelines,
+Multi-Agent reasoning systems, and optimized LSTM forecasting models.
 </div>
-
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-<h2>Selected AI Projects</h2>
-
-<div class="project">
-<h3>Business Reputation Insights Analyzer (LLM + RAG)</h3>
-<p>Problem → Analyze Google Maps reviews for business insights.</p>
-<p>Tools → Python, LangChain, RAG, LLM APIs</p>
-<a href="https://github.com/MUTHUSELVAM25/Business-Reputation-Insights-Analyzer-Google-Maps-Reviews-LLMs.git" target="_blank">GitHub Link</a>
-</div>
-
-<div class="project">
-<h3>Multi AI Agents using LangGraph</h3>
-<p>Built collaborative AI agents performing structured reasoning tasks.</p>
-<a href="https://github.com/MUTHUSELVAM25/Multi-AI-Agents-using-LangGraph.git" target="_blank">GitHub Link</a>
-</div>
-
-<div class="project">
-<h3>Instruction Fine-Tuned LLM using LoRA (PEFT)</h3>
-<p>Fine-tuned open-source LLM using parameter-efficient techniques.</p>
-<a href="https://github.com/MUTHUSELVAM25/Instruction-Fine-Tuned-LLM-using-LoRA-PEFT-.git" target="_blank">GitHub Link</a>
-</div>
-
-<div class="project">
-<h3>Brain Tumor MRI Image Classification</h3>
-<p>Deep Learning CNN model for medical imaging classification.</p>
-<a href="https://github.com/MUTHUSELVAM25/Brain-Tumor-MRI-Image-Classification-.git" target="_blank">GitHub Link</a>
-</div>
-
-<!-- Add remaining projects similarly -->
-
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
-<h2>Technical Architecture</h2>
-
+<section id="skills" class="fade-in">
+<h2>Technical <span class="highlight">Architecture</span></h2>
 <div class="skills-grid">
-
 <div class="skill-box">
-<h4>AI Core</h4>
-Machine Learning<br>
-Deep Learning<br>
-Time-Series Forecasting<br>
-Hyperparameter Optimization
+AI Core<br>ML | DL | LSTM | CNN | Optimization
 </div>
-
 <div class="skill-box">
-<h4>LLM Systems</h4>
-LangChain<br>
-LangGraph<br>
-RAG<br>
-LoRA (PEFT)<br>
-Multi-Agent Systems
+LLM Systems<br>RAG | LangChain | LangGraph | LoRA
 </div>
-
 <div class="skill-box">
-<h4>Data & Analytics</h4>
-Pandas<br>
-Power BI<br>
-MySQL<br>
-Data Visualization
+Data Stack<br>Pandas | Power BI | MySQL
 </div>
-
 <div class="skill-box">
-<h4>Deployment</h4>
-Streamlit<br>
-AWS<br>
-GitHub<br>
-API Integration
+Deployment<br>AWS | Streamlit | GitHub
 </div>
-
 </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section>
-<h2>Certifications</h2>
-<div class="cert-list">
-Master Data Science – GUVI<br>
-Deep Learning using PyTorch<br>
-Machine Learning on AWS<br>
-Natural Language Processing using Python<br>
-Data Analytics using Pandas<br>
-Power BI<br>
-Advanced Professional Certification – NSDC Skill India
+<!-- PROJECTS -->
+<section id="projects" class="fade-in">
+<h2>Top <span class="highlight">Projects</span></h2>
+
+<div class="project-card">
+<h3>Business Reputation Insights Analyzer</h3>
+<p>LLM-powered RAG system for Google Reviews analysis.</p>
+</div>
+
+<div class="project-card">
+<h3>Multi-AI Agents using LangGraph</h3>
+<p>Collaborative multi-agent AI workflows.</p>
+</div>
+
+<div class="project-card">
+<h3>Instruction Fine-Tuned LLM (LoRA)</h3>
+<p>Parameter-efficient fine-tuned LLM model.</p>
+</div>
+
+<div class="project-card">
+<h3>Brain Tumor MRI Classification</h3>
+<p>Deep Learning medical image classifier.</p>
+</div>
+
+<div class="project-card">
+<h3>ACO-Optimized LSTM Solar Forecasting</h3>
+<p>Research-based time series forecasting model.</p>
+</div>
+
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="fade-in">
+<h2>Research <span class="highlight">Publication</span></h2>
+<div class="research-box">
+Optimized LSTM Model for Day-Ahead Solar Power Prediction using ACO.
+Published March 2025.
 </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="contact">
-<h2>Contact</h2>
-<p>Email: <a href="mailto:muthuselvam25042003@gmail.com">muthuselvam25042003@gmail.com</a></p>
-<p>GitHub: <a href="https://github.com/MUTHUSELVAM25" target="_blank">github.com/MUTHUSELVAM25</a></p>
-<p>LinkedIn: <a href="https://www.linkedin.com/in/muthu-selvam-359318250" target="_blank">linkedin.com/in/muthu-selvam-359318250</a></p>
+<section id="contact" class="contact-section fade-in">
+<h2 class="contact-title">Let’s work <span>together</span></h2>
+<p class="contact-sub">
+Open to AI Engineering & Research opportunities.
+</p>
+
+<div class="contact-box">
+<div class="contact-info">
+<p>Email: muthuselvam25042003@gmail.com</p>
+<p>Location: Chennai, Tamil Nadu</p>
+</div>
+
+<form class="contact-form">
+<input type="text" placeholder="Name *" required>
+<input type="email" placeholder="Email *" required>
+<textarea rows="5" placeholder="Message *" required></textarea>
+<button type="submit">Send Message →</button>
+</form>
+</div>
 </section>
 
-<footer>
-© 2026 Muthu Selvam | AI Systems Portfolio
-</footer>
+<script>
+const faders=document.querySelectorAll('.fade-in');
+const appearOptions={threshold:0.2};
 
-</div>
+const appearOnScroll=new IntersectionObserver(function(entries,appearOnScroll){
+entries.forEach(entry=>{
+if(!entry.isIntersecting) return;
+entry.target.classList.add('show');
+appearOnScroll.unobserve(entry.target);
+});
+},appearOptions);
+
+faders.forEach(fader=>{
+appearOnScroll.observe(fader);
+});
+</script>
+
 </body>
 </html>
