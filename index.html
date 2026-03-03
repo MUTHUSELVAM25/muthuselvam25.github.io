@@ -6,7 +6,8 @@
 <title>MUTHU SELVAM | PORTFOLIO</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
 <style>
 *{
     margin:0;
@@ -236,29 +237,58 @@ h2{
     
 /* PROJECTS */
 
+/* PROJECTS */
+
+.projects-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+    margin-top:50px;
+}
+
 .project-card{
-    background:#111827;
+    position:relative;
+    background:linear-gradient(145deg,#0f172a,#111c35);
     padding:30px;
-    border-radius:15px;
-    margin-bottom:35px;
+    border-radius:18px;
     border:1px solid rgba(255,255,255,0.05);
-    transition:0.4s;
+    transition:0.4s ease;
 }
 
 .project-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 0 30px rgba(139,92,246,0.4);
+    transform:translateY(-8px);
+    box-shadow:0 0 35px rgba(139,92,246,0.4);
 }
 
 .project-card h3{
-    color:#3b82f6;
-    margin-bottom:10px;
+    font-size:20px;
+    margin-bottom:15px;
+    color:#60a5fa;
 }
 
 .project-card p{
     color:#94a3b8;
+    line-height:1.7;
+    font-size:15px;
 }
 
+/* GitHub Icon Top Right */
+
+.github-icon{
+    position:absolute;
+    top:18px;
+    right:18px;
+    font-size:22px;
+    color:#cbd5e1;
+    transition:0.3s;
+}
+
+.github-icon:hover{
+    color:#8b5cf6;
+    transform:scale(1.2);
+}
+
+    
 /* RESEARCH */
 
 .research-box{
@@ -475,42 +505,69 @@ Alongside research, I actively build production-oriented AI systems including RA
    
     
 <!-- PROJECTS -->
+     
 <section id="projects" class="fade-in">
-<h2>Top <span class="highlight">Projects</span></h2>
+    <h2>Top <span class="highlight">Projects</span></h2>
 
-<div class="project-card">
-<h3>Business Reputation Insights Analyzer</h3>
-<p>LLM-powered Business Reputation Insights Analyzer System for Google Reviews analysis.</p>
-</div>
+    <div class="projects-container">
 
-<div class="project-card">
-<h3>Multi-AI Agents using LangGraph</h3>
-<p>Collaborative multi-agent AI workflows.</p>
-</div>
+        <!-- 1 -->
+        <div class="project-card">
+            <a href="https://github.com/MUTHUSELVAM25/Business-Reputation-Insights-Analyzer-Google-Maps-Reviews-LLMs.git" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <h3>Business Reputation Insights Analyzer</h3>
+            <p>LLM-powered RAG system for intelligent Google Reviews analysis and business sentiment insights.</p>
+        </div>
 
-<div class="project-card">
-<h3>Instruction Fine-Tuned LLM (LoRA)</h3>
-<p>Parameter-efficient fine-tuned LLM model.</p>
-</div>
+        <!-- 2 -->
+        <div class="project-card">
+            <a href="https://github.com/MUTHUSELVAM25/Company-RAG-Assistant-Intelligent-Document-QA.git" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <h3>Company RAG Assistant – Intelligent Document QA</h3>
+            <p>Enterprise-grade Retrieval-Augmented Generation assistant for intelligent document-based question answering.</p>
+        </div>
 
-<div class="project-card">
-<h3>Brain Tumor MRI Classification</h3>
-<p>Deep Learning medical image classifier.</p>
-</div>
+        <!-- 3 -->
+        <div class="project-card">
+            <a href="https://github.com/MUTHUSELVAM25/Multi-AI-Agents-using-LangGraph.git" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <h3>Multi-AI Agents using LangGraph</h3>
+            <p>Collaborative multi-agent AI workflow system built using LangGraph for modular AI task orchestration.</p>
+        </div>
 
- <div class="project-card">
-    <h3>Weather MCP Agent – Real-Time AI Tool Integration</h3>
-    <p>LLM-assisted real-time weather agent using FastMCP and Claude for integrated forecasting and environment interaction.</p>
-    <a href="https://github.com/MUTHUSELVAM25/Weather-MCP-Agent-Real-Time-AI-Tool-Integration-with-FastMCP-Claude.git" target="_blank">GitHub Link</a>
-</div>   
+        <!-- 4 -->
+        <div class="project-card">
+            <a href="https://github.com/MUTHUSELVAM25/Instruction-Fine-Tuned-LLM-using-LoRA-PEFT-.git" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <h3>Instruction Fine-Tuned LLM (LoRA)</h3>
+            <p>Parameter-efficient fine-tuned large language model using LoRA and PEFT techniques.</p>
+        </div>
 
-<div class="project-card">
-<h3>ACO-Optimized LSTM Solar Forecasting</h3>
-<p>Research-based time series forecasting model.</p>
-</div>
+        <!-- 5 -->
+        <div class="project-card">
+            <a href="https://github.com/MUTHUSELVAM25/Weather-MCP-Agent-Real-Time-AI-Tool-Integration-with-FastMCP-Claude.git" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <h3>Weather MCP Agent – Real-Time AI Integration</h3>
+            <p>Real-time AI weather agent integrating FastMCP and Claude for contextual forecasting and tool-based interaction.</p>
+        </div>
 
+        <!-- 6 -->
+        <div class="project-card">
+            <a href="https://github.com/MUTHUSELVAM25/Brain-Tumor-MRI-Image-Classification-.git" target="_blank" class="github-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            <h3>Brain Tumor MRI Image Classification</h3>
+            <p>Deep learning-based MRI image classification model for accurate brain tumor detection.</p>
+        </div>
+
+    </div>
 </section>
-
+     
 <!-- RESEARCH -->
 <section id="research" class="fade-in">
 <h2>Research <span class="highlight">Publication</span></h2>
