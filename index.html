@@ -352,7 +352,59 @@ h2{
 
 /* CONTACT */
 
+.contact-box{
+display:flex;
+justify-content:space-between;
+gap:40px;
+background:#111827;
+padding:40px;
+border-radius:15px;
+border:1px solid rgba(255,255,255,0.05);
+}
 
+.contact-info{
+width:35%;
+}
+
+.contact-form{
+width:60%;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+background:#0b1120;
+border:1px solid rgba(255,255,255,0.08);
+padding:14px;
+border-radius:8px;
+color:white;
+}
+
+.contact-form button{
+background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+border:none;
+padding:14px;
+border-radius:8px;
+color:white;
+font-weight:600;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+box-shadow:0 0 20px rgba(139,92,246,0.7);
+transform:translateY(-2px);
+}
+
+.social-icons a:hover{
+background:#8b5cf6;
+color:white;
+transform:translateY(-4px) scale(1.1);
+}
+
+    
 /* SCROLL ANIMATION */
 
 .fade-in{
@@ -617,6 +669,60 @@ Alongside research, I actively build production-oriented AI systems including RA
 </section>     
 
 <!-- CONTACT -->
+
+<section id="contact" class="fade-in">
+
+<h2>Let’s work <span class="highlight">together</span></h2>
+
+<p style="text-align:center;color:#94a3b8;margin-bottom:50px;">
+I am currently open to AI Engineering & Research opportunities.
+</p>
+
+<div class="contact-box">
+
+<div class="contact-info">
+
+<p class="contact-label">EMAIL</p>
+<p class="contact-value">muthuselvam25042003@gmail.com</p>
+
+<p class="contact-label">LOCATION</p>
+<p class="contact-value">Bangalore, India</p>
+
+<div class="social-icons">
+
+<a href="mailto:muthuselvam25042003@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/muthu-selvam-359318250" target="_blank">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a href="https://github.com/MUTHUSELVAM25" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+</div>
+
+</div>
+
+<form class="contact-form"
+action="https://formspree.io/f/mnqewrbr"
+method="POST">
+
+<input type="text" name="name" placeholder="Name *" required>
+
+<input type="email" name="email" placeholder="Email *" required>
+
+<textarea name="message" rows="5" placeholder="Message *" required></textarea>
+
+<button type="submit">Send Message →</button>
+
+</form>
+
+</div>
+
+</section>    
 
 
 <script>
