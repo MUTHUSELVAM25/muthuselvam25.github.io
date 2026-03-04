@@ -355,10 +355,10 @@ h2{
 .contact-box{
 display:flex;
 justify-content:space-between;
-gap:40px;
+gap:60px;
 background:#111827;
-padding:40px;
-border-radius:15px;
+padding:45px;
+border-radius:18px;
 border:1px solid rgba(255,255,255,0.05);
 }
 
@@ -367,26 +367,31 @@ width:35%;
 }
 
 .contact-form{
-width:60%;
+width:65%;
 display:flex;
 flex-direction:column;
-gap:15px;
+gap:18px;
 }
 
 .contact-form input,
 .contact-form textarea{
 background:#0b1120;
 border:1px solid rgba(255,255,255,0.08);
-padding:14px;
-border-radius:8px;
+padding:16px;
+border-radius:10px;
 color:white;
+font-size:14px;
+}
+
+.contact-form textarea{
+resize:none;
 }
 
 .contact-form button{
 background:linear-gradient(90deg,#8b5cf6,#3b82f6);
 border:none;
-padding:14px;
-border-radius:8px;
+padding:16px;
+border-radius:10px;
 color:white;
 font-weight:600;
 cursor:pointer;
@@ -394,8 +399,40 @@ transition:0.3s;
 }
 
 .contact-form button:hover{
-box-shadow:0 0 20px rgba(139,92,246,0.7);
+box-shadow:0 0 25px rgba(139,92,246,0.7);
 transform:translateY(-2px);
+}
+
+.contact-label{
+font-size:13px;
+color:#94a3b8;
+margin-top:15px;
+letter-spacing:1px;
+}
+
+.contact-value{
+font-size:17px;
+margin-bottom:20px;
+font-weight:500;
+}
+
+.social-icons{
+margin-top:25px;
+display:flex;
+gap:18px;
+}
+
+.social-icons a{
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+background:rgba(139,92,246,0.15);
+color:#8b5cf6;
+font-size:20px;
+transition:0.3s;
 }
 
 .social-icons a:hover{
@@ -680,6 +717,8 @@ I am currently open to AI Engineering & Research opportunities.
 
 <div class="contact-box">
 
+<!-- LEFT SIDE -->
+
 <div class="contact-info">
 
 <p class="contact-label">EMAIL</p>
@@ -706,15 +745,18 @@ I am currently open to AI Engineering & Research opportunities.
 
 </div>
 
+
+<!-- RIGHT SIDE FORM -->
+
 <form class="contact-form"
-action="https://formspree.io/f/mnqewrbr"
+action="https://formspree.io/f/mojngdlv"
 method="POST">
 
 <input type="text" name="name" placeholder="Name *" required>
 
 <input type="email" name="email" placeholder="Email *" required>
 
-<textarea name="message" rows="5" placeholder="Message *" required></textarea>
+<textarea name="message" rows="6" placeholder="Message *" required></textarea>
 
 <button type="submit">Send Message →</button>
 
